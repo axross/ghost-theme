@@ -1,0 +1,17 @@
+<nav class="neighborArticlesNavigation">
+  {{#next_post}}
+    <div class="neighborArticlesNavigation__newer">
+      <a class="neighborArticlesNavigation__newer__link" href="{{url}}">
+        &laquo; {{title}}
+      </a>
+    </div>
+  {{/next_post}}
+
+  {{#prev_post}}
+    <div class="neighborArticlesNavigation__older">
+      <a class="neighborArticlesNavigation__older__link" href="{{url}}">
+        {{title}} &raquo;
+      </a>
+    </div>
+  {{/prev_post}}
+</nav>

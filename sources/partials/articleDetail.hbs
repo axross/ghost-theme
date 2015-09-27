@@ -1,0 +1,62 @@
+<article class="articleDetail" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+  <h1 class="articleDetail__title" itemprop="name about headline" data-permalink="{{url}}">
+    {{{title}}}
+  </h1>
+
+  <div class="articleDetail__meta">
+    <a href="{{image}}" itemprop="image"></a>
+
+    <time class="articleDetail__meta__date" datetime="{{date format='YYYY-MM-DDTHH:mm:ssZ09:00'}}" itemprop="datePublished">
+      {{date format='YYYY-MM-DD'}}
+    </time>
+
+    <span class="articleDetail__meta__shareCount">
+      <span class="__jsFetchMeShareCount" data-url="{{url absolute="true"}}">
+        ?
+      </span>Shares
+    </span>
+
+    {{#if tags}}
+      <span class="articleDetail__meta__tags">
+        {{#foreach tags}}
+          <a class="articleDetail__meta__tags__item" href="{{url}}" title="{{name}}">
+            #{{name}}
+          </a>
+        {{/foreach}}
+      </span>
+    {{/if}}
+  </div>
+
+  <div class="articleDetail__body" itemprop="articleBody">
+    {{content}}
+  </div>
+
+  <div class="articleDetail__shares">
+    <div class="articleDetail__shares__item">
+      <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="vertical-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+    </div>
+
+    <div class="articleDetail__shares__item">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </div>
+
+    <div class="articleDetail__shares__item">
+      <div class="fb-like" data-layout="box_count"></div>
+    </div>
+
+    <div class="articleDetail__shares__item">
+      <a data-pocket-label="pocket" data-pocket-count="vertical" class="pocket-btn" data-lang="ja"></a>
+      <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+    </div>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.4&appId=524721300901204";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  </div>
+</article>

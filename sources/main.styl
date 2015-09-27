@@ -1,0 +1,73 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic'
+@import './sanitize'
+@import './prism'
+
+$mainColor = #007CD1
+$textColor = #607F94
+$grayColor = lighten($textColor, 25)
+$headColor = darken($textColor, 25)
+$linkColor = $mainColor
+$backgroundColor = #fff
+$codeBackgroundColor = lighten($textColor, 47.5)
+
+$leftPaneWidth = 640px
+$rightPaneWidth = 320px
+
+html,
+body
+  min-width 100%
+  min-height 100%
+  margin 0
+  background $backgroundColor
+  color $textColor
+  font-size 16px
+  font-family 'Open Sans', 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
+
+a
+  display inline-block
+  color $mainColor
+  transition background 500ms ease-in-out 0ms,
+             color 500ms ease-in-out 0ms
+  &:hover
+    background $mainColor
+    color #fff
+
+#globalHeader
+  width 100%
+  min-width $leftPaneWidth + $rightPaneWidth + 16px * 8
+  margin-bottom 64px
+
+#globalFooter
+  width 100%
+  min-width $leftPaneWidth + $rightPaneWidth + 16px * 8
+  margin-bottom 2rem
+
+#globalWrapper
+  width $leftPaneWidth + $rightPaneWidth + 16px * 8
+  margin 0 auto 4rem
+  padding 0 2rem
+  font-size 0px
+  #globalMain
+    display inline-block
+    width $leftPaneWidth
+    vertical-align top
+    #globalMainInner
+      display block
+      font-size 1rem
+  #globalSidebar
+    display inline-block
+    width $rightPaneWidth
+    margin-left 4rem
+    vertical-align top
+    #globalSidebarInner
+      display block
+      font-size 1rem
+
+@import './mixins/articleBodyMixin'
+
+@import './partials/articleDetail'
+@import './partials/articleSummaries'
+@import './partials/footer'
+@import './partials/header'
+@import './partials/neighborArticlesNavigation'
+@import './partials/pagination'

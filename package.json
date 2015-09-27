@@ -1,0 +1,40 @@
+{
+  "name": "ghost-theme",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "initialize": "cd ./ghost && npm i && ./node_modules/.bin/grunt init",
+    "start": "node ./ghost/index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axross/ghost-theme.git"
+  },
+  "author": "axross <kou@axross.org> (http://axross.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axross/ghost-theme/issues"
+  },
+  "homepage": "https://github.com/axross/ghost-theme#readme",
+  "devDependencies": {
+    "babel-core": "^5.8.25",
+    "babelify": "^6.3.0",
+    "browserify": "^9.0.8",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-csso": "^1.0.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-stylus": "^2.0.7",
+    "gulp-watchify": "^0.5.0",
+    "uglifyify": "^3.0.1",
+    "vinyl-buffer": "^1.0.0",
+    "watchify": "^3.4.0"
+  }
+}

@@ -1,0 +1,45 @@
+<section class="articleSummaries">
+  {{#foreach posts}}
+    <article class="articleSummaries__item" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+      <h1 class="articleSummaries__item__title" itemprop="about name headline">
+        <a href="{{url}}">
+          {{{title}}}
+        </a>
+      </h1>
+
+      <aside class="articleSummaries__item__meta">
+        <a href="{{image}}" itemprop="image"></a>
+
+        <time class="articleSummaries__item__meta__date" datetime="{{date format='YYYY-MM-DDTHH:mm:ssZ09:00'}}" itemprop="datePublished">
+          {{date format='YYYY-MM-DD'}}
+        </time>
+
+        <span class="articleSummaries__item__meta__shareCount">
+          <span class="__jsFetchMeShareCount" data-url="{{url absolute="true"}}">
+            ?
+          </span>Shares
+        </span>
+
+        {{#if tags}}
+          <span class="articleSummaries__item__meta__tags">
+            {{#foreach tags}}
+              <a class="articleSummaries__item__meta__tags__item" href="{{url}}" title="{{name}}">
+                #{{name}}
+              </a>
+            {{/foreach}}
+          </span>
+        {{/if}}
+      </aside>
+
+      <section class="articleSummaries__item__summary" itemprop="articleBody">
+        {{excerpt words="16"}}
+      </section>
+
+      <nav class="articleSummaries__item__readmore">
+        <a href="{{url}}">
+          Read more &raquo;
+        </a>
+      </nav>
+    </article>
+  {{/foreach}}
+</section>

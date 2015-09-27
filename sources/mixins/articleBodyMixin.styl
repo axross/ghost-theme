@@ -1,0 +1,66 @@
+articleBodyMixin()
+  line-height 1.75
+  font-size 1rem
+  *
+    max-width 100%
+    height auto
+  ul,
+  ol,
+  p
+    margin 1rem auto
+  pre,
+  blockquote,
+  iframe
+    margin 1.5rem auto !important
+  p img
+    margin 0.5rem auto
+    vertical-align bottom
+  pre,
+  code
+    background-color $codeBackgroundColor !important
+    font-size 0.875rem
+    text-shadow none !important
+    *
+      background-color $codeBackgroundColor !important
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    margin 1rem auto
+    color $headColor
+  h1
+    font-size 2rem
+  h2
+    font-size 1.75rem
+  h3
+    font-size 1.5rem
+  h4
+    font-size 1.25rem
+  h5,
+  h6
+    font-size 1rem
+  ul,
+  ol
+    display block
+    padding-left 2rem
+    ul,
+    ol
+      margin auto
+  li
+    margin 0.5rem 0
+  code
+    display inline-block
+    padding 0 8px
+    // color #3f3f3f
+    font-family Consolas, Monaco, 'Andale Mono', monospace
+    font-size 0.875rem
+  blockquote
+    padding 1rem
+    background-color $codeBackgroundColor
+    font-style italic
+    *:first-child
+      margin-top auto
+    *:last-child
+      margin-bottom auto
