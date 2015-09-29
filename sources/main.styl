@@ -13,6 +13,13 @@ $codeBackgroundColor = lighten($textColor, 47.5)
 
 $contentWidth = 800px
 
+*
+  word-wrap break-word
+  touch-action manipulation
+@media (max-width: 480px)
+  *
+    word-break break-all
+
 html,
 body
   min-width 100%
