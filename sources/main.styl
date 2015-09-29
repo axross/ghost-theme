@@ -5,13 +5,13 @@
 $mainColor = #007CD1
 $textColor = #607F94
 $grayColor = lighten($textColor, 25)
+$lightGrayColor = lighten($textColor, 45)
 $headColor = darken($textColor, 25)
 $linkColor = $mainColor
 $backgroundColor = #fff
 $codeBackgroundColor = lighten($textColor, 47.5)
 
-$leftPaneWidth = 640px
-$rightPaneWidth = 320px
+$contentWidth = 800px
 
 html,
 body
@@ -31,38 +31,30 @@ a
 
 #globalHeader
   width 100%
-  min-width $leftPaneWidth + $rightPaneWidth + 16px * 8
   margin-bottom 64px
 
 #globalFooter
   width 100%
-  min-width $leftPaneWidth + $rightPaneWidth + 16px * 8
   margin-bottom 2rem
 
-#globalWrapper
-  width $leftPaneWidth + $rightPaneWidth + 16px * 8
+#globalContent
+  width $contentWidth
   margin 0 auto 4rem
   padding 0 2rem
-  font-size 0px
-  #globalMain
-    display inline-block
-    width $leftPaneWidth
-    vertical-align top
-    #globalMainInner
-      display block
-      font-size 1rem
-  #globalSidebar
-    display inline-block
-    width $rightPaneWidth
-    margin-left 4rem
-    vertical-align top
-    #globalSidebarInner
-      display block
-      font-size 1rem
+  #globalContentMain
+    width 100%
+  #globalContentSub
+    width 100%
+
+@media (max-width: 480px)
+  #globalContent
+    width 100%
+    padding 0 1rem
 
 @import './mixins/articleBodyMixin'
 
 @import './partials/articleDetail'
+@import './partials/articleMeta'
 @import './partials/articleSummaries'
 @import './partials/footer'
 @import './partials/header'

@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
   `;
 
   const appendHotArticle = ({ title, url, images }) => {
-    console.log(title, url, images);
     const partialHtml = partialLiTemplate
                           .replace(/\:title/g, title)
                           .replace(/\:url/g, url)
@@ -40,9 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   google.load('feeds', '1', {
     callback() {
-      // const feed = new google.feeds.Feed(
-      //   `http://b.hatena.ne.jp/entrylist?mode=rss&sort=count&url=${window.location.protocol}//${window.location.hostname}`
-      // );
       const feed = new google.feeds.Feed(
         `http://b.hatena.ne.jp/entrylist?mode=rss&sort=count&url=http://axross.me/`
       );

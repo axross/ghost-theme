@@ -3,29 +3,7 @@
     {{{title}}}
   </h1>
 
-  <div class="articleDetail__meta">
-    <a href="{{image}}" itemprop="image"></a>
-
-    <time class="articleDetail__meta__date" datetime="{{date format='YYYY-MM-DDTHH:mm:ssZ09:00'}}" itemprop="datePublished">
-      {{date format='YYYY-MM-DD'}}
-    </time>
-
-    <span class="articleDetail__meta__shareCount">
-      <span class="__jsFetchMeShareCount" data-url="{{url absolute="true"}}">
-        ?
-      </span>Shares
-    </span>
-
-    {{#if tags}}
-      <span class="articleDetail__meta__tags">
-        {{#foreach tags}}
-          <a class="articleDetail__meta__tags__item" href="{{url}}" title="{{name}}">
-            #{{name}}
-          </a>
-        {{/foreach}}
-      </span>
-    {{/if}}
-  </div>
+  {{> articleMeta}}
 
   <div class="articleDetail__body" itemprop="articleBody">
     {{content}}

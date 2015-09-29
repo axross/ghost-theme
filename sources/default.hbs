@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja-JP">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -26,27 +26,25 @@
     {{> "header"}}
   </header>
 
-  <section id="globalWrapper">
-    <section id="globalMain">
-      <section id="globalMainInner">
-        {{{body}}}
-      </section>
+  <section id="globalContent">
+    <section id="globalContentMain">
+      {{{body}}}
     </section>
 
-    <section id="globalSidebar">
-      <section id="globalSidebarInner">
-        {{> "sidebar"}}
-      </section>
+    <section id="globalContentSub">
+      {{> hotArticles}}
     </section>
   </section>
+
+  {{ghost_foot}}
 
   <section id="globalFooter">
     {{> "footer"}}
   </section>
 
-  {{ghost_foot}}
-
   <script src="{{asset "js/jquery-2.1.4.min.js"}}"></script>
   <script src="{{asset "js/prism.js"}}"></script>
+  <script src="{{asset "js/fetchHotArticles.js"}}"></script>
+  <script src="{{asset "js/fetchShareCounts.js"}}"></script>
 </body>
 </html>
