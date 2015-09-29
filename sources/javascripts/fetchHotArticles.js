@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   google.load('feeds', '1', {
     callback() {
       const feed = new google.feeds.Feed(
-        `http://b.hatena.ne.jp/entrylist?mode=rss&sort=count&url=http://axross.me/`
+        `http://b.hatena.ne.jp/entrylist?mode=rss&sort=count&url=${window.location.protocol}//${window.location.hostname}/`
       );
       feed.setNumEntries(5);
       feed.load(result => {
