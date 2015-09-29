@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const $hotArticles = $('#hotArticles');
+  const hotArticlesEl = document.getElementById('hotArticles');
   const partialLiTemplate = `
     <li class="hotArticles__body__articles__item">
       <a
@@ -32,9 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
                           .replace(/\:title/g, title)
                           .replace(/\:url/g, url)
                           .replace(/\:image/g, images[0]);
-    const $partial = $(partialHtml);
 
-    $hotArticles.append($partial);
+    hotArticlesEl.innerHTML = hotArticlesEl.innerHTML + partialHtml;
   };
 
   google.load('feeds', '1', {
